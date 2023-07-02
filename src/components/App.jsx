@@ -23,6 +23,9 @@ export class App extends Component {
   };
 
   handleFormSubmit = async (formValue) => {
+    if(this.state.formValue === formValue) {
+      return;
+    }
     this.setState( { formValue,  images: []})
   }
 
